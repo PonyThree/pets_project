@@ -1,0 +1,8 @@
+footer > .info{
+    display: flex;
+    width: 75rem;
+    height: 3.625rem;
+    margin:0 auto;
+    min-width: 75rem;
+    justify-content:space-between ;
+}

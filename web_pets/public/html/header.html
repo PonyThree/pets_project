@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="Author" content="ponywei">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link rel="shortcut icon" href="../img/ponywei.ico">
+    <!--引入boot的文件,引入顺序有要求-->
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <!--头部信息-->
+        <div class="info">
+            <p>欢迎您来到 中博绿亚官网 ！</p>
+            <ul class="list-unstyled nav justify-content-around align-items-center mr-0">
+                <li class="nav-item p-0"><span class="iconfont icon-dianhua"></span>400-027-5208</li>
+                <li class="nav-item p-0"><a href="mailto:18323479896@163.com" class="text-dark nav-link"><span class="iconfont icon-youxiang"></span>ponywei@163.com</a></li>
+            </ul>
+        </div>
+        <!--头部导航列表部分-->
+        <div class="h_nav_info">
+            <div class="navList row">
+                <!--导航logo-->
+                <div class="col-3 p-0 nav_logo">
+                    <h2 class="mb-0"><a href="index.html"><img src="../img/logo.png" alt=""/></a></h2>
+                </div>
+                <!--头部导航列表-->
+                <ul class="nav align-items-center col-9 justify-content-between p-0">
+                    <li class="nav-item">
+                        <a href="culture" class="nav-link text-white">企业文化</a>
+                        <ul class="navSub list-unstyled p-0" style="display:none;">
+                            <li><a href="culture" class="text-white">企业文化</a></li>
+                            <li><a href="compeny" class="text-white">公司介绍</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ehdnews" class="nav-link text-white">新闻资讯</a>
+                        <ul class="navSub list-unstyled p-0" style="display:none;">
+                            <li><a href="ehdnews" class="text-white">公司资讯</a></li>
+                            <li><a href="indnews" class="text-white">行业新闻</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="xiaochong" class="nav-link text-white">产品中文</a>
+                        <ul class="navSub list-unstyled p-0" style="display:none;">
+                            <li><a href="xiaochong" class="text-white">小宠系列</a></li>
+                            <li><a href="anlida" class="text-white">安力达</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="team" class="nav-link text-white">医师团队</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="productvideo" class="nav-link text-white">小宠课堂</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="online" class="nav-link text-white">小宠在线</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact" class="nav-link text-white">联系我们</a>
+                        <ul class="navSub list-unstyled p-0" style="display:none;">
+                            <li><a href="contact" class="text-white">联系我们</a></li>
+                            <li><a href="join" class="text-white">加入我们</a></li>
+                            <li><a href="partner" class="text-white">合作伙伴</a></li>
+                            <li><a href="hispic" class="text-white">历史图片</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<script>
+    //找到要绑定事件的元素   为其绑定事件
+    $('.navList > .nav > li').mouseenter(function(){
+        //查找要修改的元素
+        var $li=$(this);
+        // console.log($li.text());
+        //  将其它同级的兄弟元素删去类名hover 隐藏下部的内容
+        $li.siblings('li').removeClass('hover').find('ul.navSub').hide();
+        //自己添加类名hover 显示下部的内容
+        $li.addClass('hover').find('ul.navSub').show();
+    });
+</script>
+</body>
+</html>

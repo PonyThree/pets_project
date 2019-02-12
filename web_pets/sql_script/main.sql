@@ -105,3 +105,5 @@ INSERT INTO industry_news VALUES(null,'楚天都市报：宠物狗要补充营�
 CREATE TABLE products(
 	pid TINYINT PRIMARY KEY AUTO_INCREMENT,
 	pname VARCHAR(20) NOT NULL,
+
+);
