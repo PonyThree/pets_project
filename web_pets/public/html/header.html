@@ -88,7 +88,13 @@
         $li.siblings('li').removeClass('hover').find('ul.navSub').hide();
         //自己添加类名hover 显示下部的内容
         $li.addClass('hover').find('ul.navSub').show();
-    });
+    }).mouseleave(function(){
+        //查找要修改的元素
+        var $li=$(this);
+        //  将其它同级的兄弟元素删去类名hover 隐藏下部的内容
+        $li.find('ul.navSub').hide();
+        $li.removeClass('hover');
+    })
 </script>
 </body>
 </html>

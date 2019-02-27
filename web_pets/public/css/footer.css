@@ -1,8 +1,230 @@
-footer > .info{
-    display: flex;
-    width: 75rem;
-    height: 3.625rem;
+
+footer{
+    width:100%;
     margin:0 auto;
-    min-width: 75rem;
-    justify-content:space-between ;
+    text-align:center;
+}
+footer .footer_top{
+    widows: 100%;
+    background: url('../img/footer_bg.jpg') center/cover no-repeat;
+}
+/* 第一个li标题样式 */
+footer .footer_top_txt{
+    padding-top:3.8rem; 
+    padding-bottom:2.8rem; 
+}
+footer .footer_top_txt > li:first-child{
+    position: relative;
+    margin-bottom:3.5rem;
+}
+/* 伪元素-横线 */
+footer .footer_top_txt > li:first-child::after{
+    position: absolute;
+    background-color: #fff;
+    content:'';
+    top:4.5rem;
+    left:50%;
+    margin-left:-4rem;
+    width:8rem;
+    height:1px;
+}
+/* 标题样式 */
+footer .footer_top_txt > li:first-child h4{
+    color:#fff;
+    font:bold 3rem/3rem '微软雅黑, 宋体';
+}
+/* viewmore样式 */
+/* 按钮样式 */
+footer .v_more a{
+    width:15rem;
+    height:3rem;
+    padding:0;
+    margin:0 auto;
+    background-color: #fff;
+    color:#2e962e;
+    font: 1.1rem/2.8125rem 'SimHei'; 
+    text-transform: uppercase;
+    transition:all 1s linear;
+    text-decoration: none;
+}
+footer .footer_top_txt > li:nth-child(2) img{
+    width:46%;
+}
+/* 鼠标放上去效果 */
+footer .v_more a:hover{
+    width:16rem;
+    color: #fff;
+    background: #2e962e;
+}
+/* 底部info部分 */
+.container{
+    height:auto;
+}
+/* 第一块有限公司区域样式 */
+.f_info {
+    font: 14px/30px \5FAE\8F6F\96C5\9ED1,\5B8B\4F53;
+    color: #535353;
+}
+.f_info  h5{
+    position:relative;
+    margin-bottom: 1.5rem;
+    font: bold 1rem/2.8125rem '微软雅黑';
+    color: #47b547;
+    border-bottom:1px solid #d2d2d2;
+}
+.f_info  h5::after{
+    position: absolute;
+    display:block;
+    content:'';
+    z-index: 2;
+    top:40px;
+    width:35px;
+    height: 1px;
+    background-color: #d2d2d2;
+}
+.company > p{
+    font: 14px/24px '宋体';
+    color: #878787;
+}
+.company .iconfont{
+    color:#47b547;
+    font-size: 20px;
+    line-height: 20px;
+}
+.company .icon-dianhua1{
+    display: inline-block;
+    margin-left: -8px;
+}
+.company >ul>li:first-child >strong{
+    margin-left:-11px;
+}
+.company>ul >li{
+    font:14px/24px \5FAE\8F6F\96C5\9ED1,\5B8B\4F53;
+    color: #6a6a6a;
+    transition:margin-left 1s linear;
+}
+.company>ul >li:last-child{
+    margin-right:70px;
+}
+.company>ul >li:hover{
+    margin-left:-8px;
+}
+
+/* 留言栏 */
+.f_info .resize{
+    resize:none;
+}
+.f_info .rm_info{
+    margin-top:-3px;
+}
+.f_info .remark_btn{
+    display:block;
+    font: 14px/34px Roboto,arial;
+    width: 182px;
+    color: #fff;
+    background: #47b547;
+    outline: none;
+    transition:all 1s linear;
+}
+.f_info .remark_btn:hover{
+    width: 200px;
+    background-color: #2e962e;
+}
+.rm_info input,.resize{
+    background-color: #f4f4f4;
+    outline: none;
+}
+.rm_info input:focus,.resize:focus{
+    border-color:#47b547;
+}
+.code{
+    font-size: 12px;
+    color: #5c5c5c;
+}
+.code strong{
+    display: block;
+    margin-top:-8px;
+}
+/* footer底部部分样式 */
+.f_bottom .text{
+    margin-left:30px;
+}
+.f_bottom .text >p{
+    font: 14px/30px \5FAE\8F6F\96C5\9ED1,\5B8B\4F53;
+    color: #878787;
+    margin-left: 6px;
+}
+.f_bottom .text>strong {
+    display: block;
+    margin-top: -10px;
+    font: bold 22px/30px arial;
+    color: #000;
+}
+.f_bottom  .icon-icon-fuwurexian{
+    display: inline-block;
+    margin-top:-10px;
+    width: 20px;
+    height: 20px;
+    font-size: 46px;
+    line-height: 35px;
+    color: #47b547;
+}
+.f_bottom .f_nav >li{
+    padding:4px;
+    margin-top:14px;
+    /* border:1px solid #f00; */
+}
+.f_bottom .f_nav >li:hover a{
+    color:#47b547;
+    text-decoration: none;
+}
+.f_bottom .safer{
+    font: 12px/22px \5B8B\4F53;
+    clear: both;
+    color: #7f7f7f;
+}
+.f_bottom .safer >li >a{
+    color:blueviolet;
+}
+.f_bottom .f_nav >li>a{
+    display: block;
+    color:#464646;
+    font: 14px/1.7 \5FAE\8F6F\96C5\9ED1,\5B8B\4F53;
+    padding:4px 10px;
+}
+.f_bottom .f_nav >li>a:hover{
+    text-decoration: none;
+
+}
+.f_share{
+    float:right;
+    width:200px;
+    font-size: 13px;
+    line-height: 16px !important;
+    /* border:1px solid #f00; */
+}
+.f_share >li >a>i{
+    font-size: 22px;
+    display: inline-block;
+    line-height: 24px;
+    width: 24px;
+    height: 24px;
+}
+.f_share >li >a:hover i{
+    color:#47b547;
+}
+.f_share >li:first-child{
+    position: relative;
+}
+/* 前面的数线伪元素 */
+.f_share >li:first-child::before{
+    position: absolute;
+    content:'';
+    width:1px;
+    height:14px;
+    background-color: #b1b1b1;
+    left:-4px;
+    top:50%;
+    margin-top:-7px;
+
 }

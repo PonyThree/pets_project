@@ -8,8 +8,10 @@
     <meta name="Description" content="">
     <!--响应式视口-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="shortcut icon" href="../img/ponywei.ico">
     <!--引入boot的文件,引入顺序有要求-->
     <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/basic.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
@@ -18,10 +20,34 @@
             width: 100%;
             height: 200px;
         }
+        #footer{
+            width: 100%;
+            height:800px;
+        }
     </style>
 </head>
 <body>
 <!--头部引入-->
 <iframe src="html/header.html" frameborder="0" id="header" scrolling="no"></iframe>
+<!-- 中间部分 -->
+<iframe src="html/main.html" frameborder="0" id="main" scrolling="no"></iframe>
+<!-- 底部引入 -->
+<iframe src="html/footer.html" frameborder="0" id="footer" scrolling="no"></iframe>
+<script>
+        var iframes = document.getElementsByTagName('iframe');
+        for (var i = 0, j = iframes.length; i < j; ++i) {
+            // 放在闭包中，防止iframe触发load事件的时候下标不匹配
+            (function(_i) {
+                iframes[_i].onload = function() {
+                    // 提前还原高度
+                    this.setAttribute('height', 'auto'); // 或设为''
+                    // 再在下一轮事件循环中设置新高度
+                    setTimeout(function() {
+                        iframes[_i].setAttribute('height', iframes[_i].contentWindow.document.body.scrollHeight);
+                    }, 0);
+                }
+            })(i);
+        }
+</script>
 </body>
 </html>
